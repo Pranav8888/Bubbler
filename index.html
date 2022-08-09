@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bubbler</title>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="libraries/p5.js"
+    ></script>
+    <script language="javascript" src="libraries/p5.dom.js"></script>
+    <script language="javascript" src="libraries/p5.sound.js"></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="bubble.js"
+    ></script>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="header">
+      <h1>Bubble Simulation</h1>
+    </div>
+    <div class="slidecontainer">
+      <input
+        type="range"
+        min="1"
+        max="400"
+        value="150"
+        class="slider"
+        id="numSlider"
+      />
+      <p>Bubbles: <span id="num">100</span></p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="speedSlider"
+      />
+      <p>Speed: <span id="speed"></span></p>
+      <div class="wrapper">
+        R<input
+          type="range"
+          min="0"
+          max="255"
+          value="255"
+          id="red"
+          oninput="colors()"
+        />
+      </div>
+      <div class="wrapper">
+        G<input
+          type="range"
+          min="0"
+          max="255"
+          value="255"
+          id="green"
+          oninput="colors()"
+        />
+      </div>
+      <div class="wrapper">
+        B<input
+          type="range"
+          min="0"
+          max="255"
+          value="255"
+          id="blue"
+          oninput="colors()"
+        />
+      </div>
+      <span id="output">rgb(255, 255, 255)</span>
+      <label id="switchtag">Random</label>
+      <label class="switch">
+        <input id="checkbox" type="checkbox">
+        <span class="toggleSlider round"></span>
+      </label>
+    </div>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="sketch.js"
+    ></script>
+    <script src="sliders.js"></script>
+  </body>
+</html>
